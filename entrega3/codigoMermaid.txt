@@ -1,0 +1,29 @@
+graph TD;
+    %% Título do Diagrama
+    subgraph Topologia de Rede Híbrida - 12 Roteadores
+
+    %% Componente 1: Backbone em Anel (Custo 1)
+    R1 ---|"Custo 1"| R2;
+    R2 ---|"Custo 1"| R3;
+    R3 ---|"Custo 1"| R4;
+    R4 ---|"Custo 1"| R1;
+
+    %% Componente 2: Estrela conectada ao R2 (Custo 2)
+    R2 ---|"Custo 2"| R5;
+    R2 ---|"Custo 2"| R6;
+    R2 ---|"Custo 2"| R7;
+
+    %% Componente 3: Estrela conectada ao R4 (Custo 2)
+    R4 ---|"Custo 2"| R8;
+    R4 ---|"Custo 2"| R9;
+    R4 ---|"Custo 2"| R10;
+
+    %% Componente 4: Links de Redundância (Custo 3)
+    R1 ---|"Custo 3"| R11;
+    R3 ---|"Custo 3"| R12;
+
+    end
+
+
+
+///Código usado no site mermaid.live para gerar o desenho da rede.
